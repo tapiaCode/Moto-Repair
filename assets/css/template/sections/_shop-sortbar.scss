@@ -1,0 +1,59 @@
+.vs-sort-bar {
+  margin-bottom: 60px;
+  select {
+    height: 50px;
+    border: 1px solid #eee;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    min-width: auto;
+    padding: 0 45px 0 25px;
+    font-size: 16px;
+    margin: 0;
+    background-position: right 22px center;
+  }
+  label {
+    font-size: 14px;
+    margin-bottom: 0;
+    margin-right: 15px;
+    font-weight: 500;
+    line-height: 1;
+  }
+  p.woocommerce-result-count {
+    margin-bottom: 0;
+  }
+  .nice-select {
+    border: none;
+    width: 100%;
+    min-width: 250px;
+    padding-right: 30px;
+    padding-left: 20px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 0;
+    background-color: var(--smoke-color);
+    font-size: 16px;
+    font-family: var(--body-font);
+    .list {
+      width: 100%;
+      border-radius: 0;
+      margin-top: 0px;
+      border: 1px solid var(--smoke-color);
+      box-shadow: none;
+    }
+
+    &::after {
+      border-bottom: 2px solid var(--body-color);
+      border-right: 2px solid var(--body-color);
+      height: 10px;
+      margin-top: -6px;
+      right: 24px;
+      width: 10px;
+    }
+
+    @include sm {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

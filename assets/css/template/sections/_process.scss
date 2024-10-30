@@ -1,0 +1,161 @@
+.process {
+  &--layout1 {
+    padding-top: 272px;
+    margin-top: -160px;
+    background-color: var(--smoke-color);
+    background-attachment: fixed;
+  }
+  &--layout2 {
+    padding-bottom: 245px;
+    .overlay {
+      background: linear-gradient(
+        90deg,
+        #01133c 41.07%,
+        rgba(1, 19, 60, 0) 100%
+      );
+      opacity: 0.9;
+      z-index: -1;
+    }
+  }
+  &-block {
+    $self: &;
+    &--style1 {
+      background-color: var(--smoke-color);
+      position: relative;
+      display: flex;
+      gap: 30px;
+      padding: 40px 40px 30px 40px;
+      margin-bottom: 30px;
+      @include smooth-transition;
+      @include respond-below(sm) {
+        gap: 15px;
+        padding: 40px 15px 30px 15px;
+        flex-wrap: wrap;
+      }
+      #{$self}__number {
+        position: absolute;
+        right: 0;
+        top: 0;
+        min-width: 50px;
+        min-height: 50px;
+        background-color: var(--theme-color);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--white-color);
+        font-size: 24px;
+        @include smooth-transition;
+      }
+      #{$self}__icon {
+        min-width: 70px;
+        max-height: 70px;
+        background-color: var(--theme-color);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        @include smooth-transition;
+        @include respond-below(sm) {
+          min-height: 70px;
+        }
+      }
+      #{$self}__title {
+        font-size: 24px;
+        line-height: 34px;
+        margin-bottom: 15px;
+        font-weight: 700;
+        @include smooth-transition;
+      }
+      #{$self}__text {
+        margin-bottom: 0;
+      }
+      &:hover {
+        background-color: var(--theme-color);
+        @include smooth-transition;
+        #{$self}__icon {
+          background-color: var(--title-color);
+          @include smooth-transition;
+        }
+        #{$self}__number {
+          background-color: var(--white-color);
+          color: var(--title-color);
+        }
+        #{$self}__title,
+        #{$self}__text {
+          color: var(--white-color);
+          @include smooth-transition;
+        }
+      }
+    }
+    &--style2 {
+      margin-bottom: 30px;
+      background-color: transparent;
+      &:nth-child(even) {
+        margin-top: 60px;
+        @include respond-below(md) {
+          margin-top: 0;
+        }
+      }
+      #{$self}__body {
+        text-align: center;
+        background: var(--white-color);
+        padding: 30px 25px 25px;
+      }
+      #{$self}__icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100px;
+        min-width: 100px;
+        background-color: var(--theme-color);
+        border-radius: 50%;
+        margin-bottom: 15px;
+        position: relative;
+        transition: all 0.3s ease-in-out;
+        & > img {
+          transform: rotateY(0deg);
+          @include smooth-transition;
+        }
+      }
+      #{$self}__title {
+        font-size: 24px;
+        @include smooth-transition;
+        margin: -0.25em 0 10px 0;
+      }
+      #{$self}__text {
+        margin-bottom: 0;
+      }
+      #{$self}__number {
+        position: absolute;
+        top: 0px;
+        right: -15px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--title-color);
+        font-size: 15px;
+        font-weight: 400;
+        color: var(--white-color);
+        min-width: 40px;
+        min-height: 40px;
+        border-radius: 50%;
+        border: 2px solid var(--theme-color);
+        transition: all 0.3s ease-in-out 0s;
+      }
+      &:hover {
+        #{$self}__number {
+          background-color: var(--theme-color);
+        }
+        #{$self}__icon {
+          background-color: var(--sec-color);
+          & > img {
+            transform: rotateY(180deg);
+            @include smooth-transition;
+          }
+        }
+        #{$self}__title {
+          color: var(--theme-color);
+        }
+      }
+    }
+  }
+}

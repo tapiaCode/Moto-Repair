@@ -1,0 +1,31 @@
+.newsletter {
+  &--layout1 {
+    padding: 115px 0 85px;
+    @include respond-below(sm) {
+      padding: 80px 0 55px;
+    }
+    .overlay {
+      background-color: var(--theme-color);
+      opacity: 0.85;
+      z-index: -1;
+    }
+  }
+}
+
+.subscribe {
+  &-block {
+    $self: &;
+    &--style1 {
+      position: relative;
+      #{$self}__field {
+        height: 70px;
+      }
+      .vs-btn {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}

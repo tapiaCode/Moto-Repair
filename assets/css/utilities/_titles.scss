@@ -1,0 +1,187 @@
+.sec-title {
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: capitalize;
+  line-height: 1.2;
+  margin: -0.25em 0 15px 0;
+  letter-spacing: 0.01em;
+  &.h2 {
+    font-size: 40px;
+  }
+  @include respond-below(md) {
+    font-size: 38px;
+  }
+  @include respond-below(sm) {
+    font-size: 28px;
+  }
+  @include respond-below(xs) {
+    font-size: 24px;
+  }
+  & > span {
+    color: var(--sec-color);
+  }
+}
+
+.sec-subtitle {
+  text-transform: capitalize;
+  color: var(--theme-color);
+  font-family: var(--title-font);
+  font-size: 20px;
+  font-weight: 600;
+  margin: -0.25em 0 25px 0;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: 0.03em;
+  &.style2 {
+    color: var(--sec-color);
+  }
+  &::before {
+    content: "";
+    width: 60px;
+    height: 2px;
+    background-color: var(--theme-color);
+    display: inline-block;
+  }
+  &.style3,
+  &.style4 {
+    &::before,
+    &::after {
+      content: "";
+      width: 60px;
+      height: 2px;
+      background-color: var(--white-color);
+      display: inline-block;
+    }
+  }
+  &.style4 {
+    color: var(--sec-color);
+    &::before,
+    &::after {
+      background-color: var(--theme-color);
+    }
+  }
+  &.style5 {
+    &::before,
+    &::after {
+      background-color: var(--sec-color);
+    }
+  }
+  &.style6 {
+    &::before {
+      background-color: var(--white-color);
+    }
+  }
+}
+
+.white-title {
+  .sec-subtitle,
+  .sec-title {
+    color: var(--white-color);
+  }
+}
+
+.title-area {
+  margin-bottom: calc(var(--section-title-space) - 30px);
+}
+
+.sec-btns {
+  padding: 13px 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  i.fa-arrow-left {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+}
+
+.sec-btns2 {
+  margin-bottom: calc(var(--section-title-space) - 5px);
+}
+
+.sec-line-wrap {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  margin: 0 0 80px 0;
+
+  .sec-title2 {
+    margin: -0.3em 0 -0.4em 0;
+  }
+}
+
+.sec-line {
+  background-color: $theme-color;
+  flex: 1;
+  height: 2px;
+}
+
+.border-title {
+  position: relative;
+  padding: 0 0 5px 0;
+  margin-bottom: 0;
+
+  &-border {
+    width: 48px;
+    height: 2px;
+    display: inline-block;
+    background-color: $theme-color;
+    margin-bottom: 25px;
+  }
+}
+
+@include ml {
+  .sec-title4 {
+    font-size: 42px;
+  }
+}
+
+@include lg {
+  .sec-title4 {
+    font-size: 36px;
+    line-height: 1.4;
+  }
+}
+
+@include md {
+  .sec-title3.h1,
+  .sec-title.h1 {
+    font-size: 36px;
+  }
+
+  .sec-line-wrap {
+    margin: 0 0 60px 0;
+  }
+
+  .sec-subtitle2 {
+    margin-bottom: 15px;
+  }
+
+  .title-area {
+    margin-bottom: 40px;
+  }
+}
+
+@include sm {
+  .sec-title3.h1,
+  .sec-title.h1 {
+    font-size: 30px;
+  }
+
+  .sec-subtitle {
+    font-size: 16px;
+  }
+
+  .sec-line-wrap {
+    margin: 0 0 40px 0;
+    gap: 10px;
+  }
+
+  .sec-title4 {
+    font-size: 30px;
+    line-height: 1.4;
+  }
+}

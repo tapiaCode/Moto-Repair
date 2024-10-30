@@ -1,0 +1,12 @@
+.brand {
+  &-block {
+    border: 1px solid var(--theme-color);
+    margin-bottom: 30px;
+    display: inline-block;
+  }
+  &--layout2 {
+    margin-top: -115px;
+    position: relative;
+    z-index: 1;
+  }
+}

@@ -1,0 +1,125 @@
+.breadcumb-menu {
+  max-width: 100%;
+  margin: -1px;
+  padding: 0;
+  list-style-type: none;
+  display: inline-flex;
+  background-color: var(--white-color);
+  min-width: 182px;
+  padding: 15px 30px;
+  align-items: center;
+
+  li {
+    display: inline-block;
+    list-style: none;
+    position: relative;
+
+    &:after {
+      content: "\f101";
+      position: relative;
+      margin: 0 10px;
+      font-family: var(--icon-font);
+      font-size: 27px;
+      font-weight: 400;
+      padding-top: 5px;
+      @include respond-below(sm) {
+        font-size: 20px;
+        padding-top: 4px;
+      }
+    }
+
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  li,
+  a,
+  span {
+    white-space: normal;
+    color: inherit;
+    word-break: break-word;
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-family: var(--title-font);
+    color: var(--title-color);
+    display: inline-flex;
+    align-items: center;
+    @include respond-below(sm) {
+      font-size: 14px;
+    }
+  }
+  & > li {
+    color: var(--theme-color);
+    &::after {
+      color: var(--title-color);
+    }
+    & > a {
+      color: var(--title-color);
+      &:hover {
+        color: var(--theme-color);
+      }
+    }
+  }
+}
+
+.breadcumb-title {
+  color: var(--white-color);
+  margin-bottom: 128px;
+  font-size: 64px;
+  @include respond-below(sm) {
+    margin-bottom: 40px;
+  }
+}
+
+.breadcumb-text {
+  color: var(--silver-color);
+  margin-bottom: 0;
+  max-width: 50%;
+  font-size: 22px;
+  @include respond-below(lg) {
+    max-width: 73%;
+  }
+  @include respond-below(md) {
+    max-width: 90%;
+  }
+  @include respond-below(sm) {
+    max-width: 100%;
+    font-size: 17px;
+  }
+}
+.breadcumb-wrapper {
+  padding-top: 170px;
+  background-color: var(--title-color);
+  position: relative;
+  z-index: 1;
+  &::before {
+    content: "";
+    @include overlay(1, -1);
+    background: linear-gradient(
+      90deg,
+      #01133c 31.22%,
+      rgba(1, 19, 60, 0.33) 58.62%
+    );
+  }
+  @include md {
+    padding-top: 100px;
+  }
+  @include respond-below(sm) {
+    padding-top: 50px;
+  }
+}
+
+@include md {
+  .breadcumb-title {
+    max-width: 100%;
+    font-size: 40px;
+  }
+
+  .breadcumb-menu {
+    margin-top: 15px;
+  }
+}

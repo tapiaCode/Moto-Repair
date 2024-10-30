@@ -1,0 +1,180 @@
+.service {
+  &--layout1 {
+    padding-bottom: 250px;
+    background-attachment: fixed;
+  }
+  &-carousel {
+    .slick-list {
+      margin: -30px 0;
+      padding: 30px 0;
+    }
+  }
+  &--layout3 {
+    margin-top: -130px;
+    background-position-y: 0;
+    background-color: var(--smoke-color);
+  }
+  &--layout4 {
+    padding-top: 268px;
+  }
+  &-block {
+    $block: &;
+    &--style1,
+    &--style2 {
+      text-align: center;
+      background: var(--white-color);
+      box-shadow: 0px 0px 10px rgba(1, 19, 60, 0.1);
+      padding: 40px 30px;
+      margin-bottom: 30px;
+      @include smooth-transition;
+      #{$block}__icon {
+        min-width: 120px;
+        min-height: 120px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--smoke-color);
+        border-radius: 50%;
+        background-size: 100% 80%;
+        margin-bottom: 10px;
+        @include smooth-transition;
+        position: relative;
+        z-index: 1;
+        & > img {
+          filter: none;
+          @include smooth-transition;
+        }
+        &::before {
+          border-radius: 50%;
+          background-color: var(--theme-color);
+          content: "";
+          min-width: 90px;
+          min-height: 90px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) scale(0) rotate(360deg);
+          z-index: -1;
+          opacity: 0;
+          visibility: hidden;
+          @include smooth-transition;
+        }
+      }
+      #{$block}__title {
+        margin-bottom: 10px;
+        & > a {
+          color: var(--theme-color);
+          &:hover {
+            color: var(--sec-color);
+          }
+        }
+      }
+      #{$block}__text {
+        @include smooth-transition;
+      }
+      .vs-btn {
+        padding: 12px 30px;
+        background-color: var(--theme-color);
+      }
+      &:hover {
+        background-color: var(--theme-color);
+        #{$block}__icon {
+          background-size: 100% 0%;
+          & > img {
+            filter: brightness(0) invert(1);
+            @include smooth-transition;
+          }
+          &::before {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-50%, -50%) scale(1) rotate(0deg);
+          }
+        }
+        #{$block}__title {
+          & > a {
+            color: var(--white-color);
+          }
+        }
+        #{$block}__text {
+          color: var(--white-color);
+        }
+        .vs-btn {
+          color: var(--theme-color);
+          background-color: var(--white-color);
+          &::before,
+          &::after {
+            background-color: var(--sec-color);
+          }
+          &:hover {
+            color: var(--white-color);
+          }
+        }
+      }
+    }
+    &--style1 {
+      .vs-btn {
+        &::before,
+        &::after {
+          background-color: var(--sec-color);
+        }
+        &:hover {
+          background-color: var(--sec-color);
+        }
+      }
+    }
+    &--style2 {
+      @extend .image-scale-hover;
+      padding: 0 0;
+      #{$block}__icon {
+        background-color: var(--white-color);
+        margin-top: -120px;
+      }
+      #{$block}__content {
+        padding: 0 30px 30px;
+        @include respond-below(md) {
+          padding: 0 19px 30px;
+        }
+      }
+      #{$block}__thumb {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.service-thumb-slide {
+  margin: 0 -10px;
+  .thumb {
+    padding: 0 10px;
+  }
+}
+
+.video-box {
+  .play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0;
+    &::before,
+    &::after {
+      border-radius: 0;
+      background-color: var(--theme-color);
+    }
+    i {
+      border-radius: 0;
+      background-color: var(--theme-color);
+    }
+    &:hover {
+      &::before,
+      &::after {
+        background-color: var(--sec-color);
+      }
+      i {
+        background-color: var(--sec-color);
+      }
+    }
+  }
+}
