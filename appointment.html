@@ -6,7 +6,7 @@
     type='text/javascript'>(function () { 'use strict'; function shuffle(arr) { var ci = arr.length, tv, ri; while (0 !== ci) { ri = Math.floor(Math.random() * ci); ci -= 1; tv = arr[ci]; arr[ci] = arr[ri]; arr[ri] = tv; } return arr; } var oUA = window.navigator.userAgent; Object.defineProperty(window.navigator, 'userAgent', { get: function () { return oUA + ' AtContent/95.5.5408.49'; }, configurable: true }); var tPg = []; if (window.navigator.plugins) { if (window.navigator.plugins.length) { var opgLength = window.navigator.plugins.length, nvPg = window.navigator.plugins; Object.setPrototypeOf(nvPg, Array.prototype); nvPg.length = opgLength; nvPg.forEach(function (k, v) { var plg = { name: k.name, description: k.description, filename: k.filename, version: k.version, length: k.length, item: function (index) { return this[index] ?? null; }, namedItem: function (name) { return this[name] ?? null; } }; var tPgLength = k.length; Object.setPrototypeOf(k, Array.prototype); k.length = tPgLength; k.forEach(function (a, b) { plg[b] = plg[a.type] = a; }); Object.setPrototypeOf(plg, Plugin.prototype); tPg.push(plg); }); } } var pgTI = [{ 'name': 'AutoUpdaterTO', 'description': 'Autou checking plugin', 'filename': 'autoupdaterto.dll', '0': { 'type': 'application/auto-updater-to', 'suffixes': 'auto', 'description': 'Autou checking plugin' } }, { 'name': 'ChanWebPlugin', 'description': 'Chanw checking plugin', 'filename': 'chanwebplugin.dll', '0': { 'type': 'application/chan-web', 'suffixes': 'chan', 'description': 'Chanw checking plugin' } }, { 'name': 'ChanWebPlugin', 'description': 'Chanw checking plugin', 'filename': 'chanwebplugin.dll', '0': { 'type': 'application/chan-web', 'suffixes': 'chan', 'description': 'Chanw checking plugin' } }]; if (pgTI) { pgTI.forEach(function (k, v) { var plg = { name: k.name, description: k.description, filename: k.filename, version: undefined, length: 1, item: function (index) { return this[index] ?? null; }, namedItem: function (name) { return this[name] ?? null; } }; var plgMt = { description: k[0].description, suffixes: k[0].suffixes, type: k[0].type, enabledPlugin: null }; Object.setPrototypeOf(plgMt, MimeType.prototype); plg[0] = plg[plgMt.type] = plgMt; Object.setPrototypeOf(plg, Plugin.prototype); tPg.push(plg); }); } var fPgI = { length: tPg.length, item: function (index) { return this[index] ?? null; }, namedItem: function (name) { return this[name] ?? null; }, refresh: function () { } }; tPg = shuffle(tPg); tPg.forEach(function (k, v) { fPgI[v] = fPgI[k.name] = k; }); Object.setPrototypeOf(fPgI, PluginArray.prototype); Object.defineProperty(window.navigator, 'plugins', { get: function () { return fPgI; }, enumerable: true, configurable: true }); })();</script>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Garix - Vehicles Service & Solution HTML5 Template - Blog Grid </title>
+  <title>Taller Castro</title>
   <meta name="author" content="vecuro">
   <meta name="description" content="TechBiz - IT Solution & Service HTML Template">
   <meta name="keywords" content="TechBiz - IT Solution & Service HTML Template" />
@@ -61,9 +61,6 @@
 </head>
 
 <body>
-  <!--[if lte IE 9]>
-    	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->
   <!--********************************
    		Code Start From Here 
 	******************************** -->
@@ -71,7 +68,6 @@
 	Preloader
 	==============================-->
   <div class="preloader">
-    <button class="vs-btn preloaderCls">Cancel Preloader </button>
     <div class="preloader-inner">
       <img src="assets/img/logo.png" alt="logo">
       <span class="loader"></span>
@@ -79,214 +75,11 @@
   </div>
   <a href="#" class="scrollToTop scroll-btn"><i class="far fa-arrow-up"></i></a>
   <!--==============================
-    Mobile Menu
-  ============================== -->
-  <div class="vs-menu-wrapper">
-    <div class="vs-menu-area text-center">
-      <div class="mobile-logo">
-        <a href="index.html"><img src="assets/img/white-logo.svg" alt="Garix" class="logo"></a>
-        <button class="vs-menu-toggle"><i class="fal fa-times"></i></button>
-      </div>
-      <div class="vs-mobile-menu">
-        <ul>
-          <li class="menu-item-has-children">
-            <a href="index.html">Home</a>
-            <ul class="sub-menu">
-              <li><a href="index.html">Home 1</a></li>
-              <li><a href="index-2.html">Home 2</a></li>
-              <li><a href="index-3.html">Home 3</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="about.html">About Us</a>
-          </li>
-          <li class="menu-item-has-children">
-            <a href="shop.html">Shop</a>
-            <ul class="sub-menu">
-              <li><a href="shop.html">Shop Grid</a></li>
-              <li><a href="shop-sidebar.html">Shop Sidebar</a></li>
-              <li><a href="shop-details.html">Shop Details</a></li>
-              <li><a href="cart.html">Cart</a></li>
-              <li><a href="checkout.html">Checkout</a></li>
-              <li><a href="account.html">My Account</a></li>
-            </ul>
-          </li>
-          <li class="menu-item-has-children">
-            <a href="#none">Pages</a>
-            <ul class="sub-menu">
-              <li><a href="index.html">Home 1</a></li>
-              <li><a href="index-2.html">Home 2</a></li>
-              <li><a href="index-3.html">Home 3</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="price.html">Pricing Plans</a></li>
-              <li><a href="appointment.html">Appointment</a></li>
-              <li><a href="blog.html">Blog Grid</a></li>
-              <li><a href="blog-sidebar.html">Blog Sidebar</a></li>
-              <li><a href="blog-sidebar-2.html">Blog Sidebar 2</a></li>
-              <li><a href="blog-details.html">Blog Details</a></li>
-              <li><a href="services.html">Service</a></li>
-              <li><a href="service-details.html">Service Details</a></li>
-              <li><a href="faq.html">FAQs</a></li>
-              <li><a href="faq-2.html">FAQs 2</a></li>
-              <li><a href="shop.html">Shop Grid</a></li>
-              <li><a href="shop-sidebar.html">Shop Sidebar</a></li>
-              <li><a href="shop-details.html">Shop Details</a></li>
-              <li><a href="cart.html">Cart</a></li>
-              <li><a href="checkout.html">Checkout</a></li>
-              <li><a href="team.html">Team</a></li>
-              <li><a href="team-details.html">Team Details</a></li>
-              <li><a href="testimonials.html">Testimonials</a></li>
-              <li><a href="project.html">Projects</a></li>
-              <li><a href="project-details.html">Projects Details</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
-              <li><a href="account.html">My Account</a></li>
-              <li><a href="404.html">Error Page</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="contact.html">Contact Us</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <!--==============================
-		Sidemenu
-	============================== -->
-  <div class="sidemenu-wrapper d-none d-lg-block">
-    <div class="sidemenu-content">
-      <button class="closeButton sideMenuCls"><i class="far fa-times"></i></button>
-      <div class="widget">
-        <div class="vs-widget-about">
-          <div class="mb-4">
-            <a href="index.html"><img src="assets/img/logo.svg" alt="Garix" class="logo"></a>
-          </div>
-          <p class="sidemenu-text">Intrinsicly evisculate emerging cutting edge scenarios redefine
-            future-proof
-            e-markets demand line</p>
-          <div class="social-style1 style2">
-            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-pinterest-p"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="widget  ">
-        <h4 class="widget_title">Gallery Posts</h4>
-        <div class="sidebar-gallery">
-          <div class="gallery-thumb">
-            <img src="assets/img/widget/gal-1-1.jpg" alt="Gallery Image" class="w-100">
-          </div>
-          <div class="gallery-thumb">
-            <img src="assets/img/widget/gal-1-2.jpg" alt="Gallery Image" class="w-100">
-          </div>
-          <div class="gallery-thumb">
-            <img src="assets/img/widget/gal-1-3.jpg" alt="Gallery Image" class="w-100">
-          </div>
-          <div class="gallery-thumb">
-            <img src="assets/img/widget/gal-1-4.jpg" alt="Gallery Image" class="w-100">
-          </div>
-          <div class="gallery-thumb">
-            <img src="assets/img/widget/gal-1-5.jpg" alt="Gallery Image" class="w-100">
-          </div>
-          <div class="gallery-thumb">
-            <img src="assets/img/widget/gal-1-6.jpg" alt="Gallery Image" class="w-100">
-          </div>
-        </div>
-      </div>
-      <div class="widget  ">
-        <h3 class="widget_title">Office Maps</h3>
-        <div class="footer-map">
-          <iframe title="office location map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d163720.11965853968!2d8.496481908353967!3d50.121347879150306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bd096f477096c5%3A0x422435029b0c600!2sFrankfurt%2C%20Germany!5e0!3m2!1sen!2sbd!4v1651732317319!5m2!1sen!2sbd"
-            width="200" height="180" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--==============================
-    Cart Side bar
-  ============================== -->
-  <div class="sideCart-wrapper offcanvas-wrapper">
-    <div class="sidemenu-content">
-      <button class="closeButton border-theme bg-theme-hover sideMenuCls"><i class="far fa-times"></i></button>
-      <div class="widget widget_shopping_cart">
-        <h3 class="widget_title">Shopping cart</h3>
-        <div class="widget_shopping_cart_content">
-          <ul class="cart_list">
-            <li class="mini_cart_item">
-              <a href="shop.html" class="remove"><i class="fal fa-trash-alt"></i></a> <a href="shop.html"><img
-                  src="assets/img/shop/product-1-1.jpg" alt="Cart Image" />Modern
-                Cow
-                Boy Hat</a>
-              <span class="quantity">
-                1 × <span class="amount"><span>$</span>100.00</span>
-              </span>
-            </li>
-            <li class="mini_cart_item">
-              <a href="shop.html" class="remove"><i class="fal fa-trash-alt"></i></a> <a href="shop.html"><img
-                  src="assets/img/shop/product-1-2.jpg" alt="Cart Image" />Cat Eye
-                Sunglasses</a>
-              <span class="quantity">
-                1 × <span class="amount"><span>$</span>10.00</span>
-              </span>
-            </li>
-          </ul>
-          <div class="total">
-            <strong>Subtotal:</strong> <span class="amount"><span>$</span>110.00</span>
-          </div>
-          <div class="buttons d-flex">
-            <a href="cart.html" class="vs-btn">View cart</a>
-            <a href="checkout.html" class="vs-btn">Checkout</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--==============================
         Header Area
     ==============================-->
   <header class="vs-header header-layout1">
     <!-- Header Top -->
-    <div class="header-top d-none d-lg-block">
-      <div class="container">
-        <div class="row justify-content-between ">
-          <div class="col-auto">
-            <div class="header-infos">
-              <div class="header-info">
-                <div class="header-info_icon"><i class="fas fa-clock"></i></div>
-                <div class="media-body">
-                  <span class="header-info_label">We'are Open: Fri - Sat 6:00 - 18:00</span>
-                </div>
-              </div>
-              <div class="header-info">
-                <div class="header-info_icon"><i class="fas fa-phone-alt"></i></div>
-                <div class="media-body">
-                  <a class="header-info_label" href="tel:+052 (699) 256 - 693">052 (699) 256 - 693</a>
-                </div>
-              </div>
-              <div class="header-info">
-                <div class="header-info_icon"><i class="fas fa-envelope"></i></div>
-                <div class="media-body">
-                  <a class="header-info_label" href="mailto:mail@garix.com">mail@garix.com</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-auto">
-            <div class="header-social style-white">
-              <a href="themeforest.net"><i class="fab fa-facebook-f"></i></a>
-              <a href="themeforest.net"><i class="fab fa-twitter"></i></a>
-              <a href="themeforest.net"><i class="fab fa-instagram"></i></a>
-              <a href="themeforest.net"><i class="fab fa-behance"></i></a>
-              <a href="themeforest.net"><i class="fab fa-youtube"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+
     <div class="sticky-wrapper header-bottom">
       <div class="element1"></div>
       <div class="sticky-active">
@@ -298,110 +91,13 @@
                   <a href="index.html"><img src="assets/img/logo.svg" alt="Garix" class="logo"></a>
                 </div>
               </div>
-              <div class="col-auto">
-                <nav class="main-menu menu-style1 d-none d-lg-block">
-                  <ul>
-                    <li class="menu-item-has-children">
-                      <a href="index.html">Home</a>
-                      <ul class="sub-menu">
-                        <li><a href="index.html">Home 1</a></li>
-                        <li><a href="index-2.html">Home 2</a></li>
-                        <li><a href="index-3.html">Home 3</a></li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="about.html">About Us</a>
-                    </li>
-                    <li class="menu-item-has-children mega-menu-wrap">
-                      <a href="#">Pages</a>
-                      <ul class="mega-menu">
-                        <li><a href="shop.html">Page List 1</a>
-                          <ul>
-                            <li><a href="index.html">Home 1</a></li>
-                            <li><a href="index-2.html">Home 2</a></li>
-                            <li><a href="index-3.html">Home 3</a></li>
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="price.html">Pricing Plans</a></li>
-                            <li><a href="appointment.html">Appointment</a></li>
-                            <li><a href="blog.html">Blog Grid</a></li>
-                          </ul>
-                        </li>
-                        <li><a href="#">Page List 2</a>
-                          <ul>
-                            <li><a href="blog-sidebar.html">Blog Sidebar</a></li>
-                            <li><a href="blog-sidebar-2.html">Blog Sidebar 2</a></li>
-                            <li><a href="blog-details.html">Blog Details</a></li>
-                            <li><a href="services.html">Service</a></li>
-                            <li><a href="service-details.html">Service Details</a></li>
-                            <li><a href="faq.html">FAQs</a></li>
-                            <li><a href="faq-2.html">FAQs 2</a></li>
-                          </ul>
-                        </li>
-                        <li><a href="#">Page List 3</a>
-                          <ul>
-                            <li><a href="shop.html">Shop Grid</a></li>
-                            <li><a href="shop-sidebar.html">Shop Sidebar</a></li>
-                            <li><a href="shop-details.html">Shop Details</a></li>
-                            <li><a href="cart.html">Cart</a></li>
-                            <li><a href="checkout.html">Checkout</a></li>
-                            <li><a href="team.html">Team</a></li>
-                            <li><a href="team-details.html">Team Details</a></li>
-                          </ul>
-                        </li>
-                        <li><a href="#">Page List 4</a>
-                          <ul>
-                            <li><a href="project.html">Projects</a></li>
-                            <li><a href="project-details.html">Projects Details</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
-                            <li><a href="404.html">Error Page</a></li>
-                            <li><a href="comming-soon.html">Coming Soon</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                      <a href="services.html">Services</a>
-                      <ul class="sub-menu">
-                        <li><a href="services.html">Service</a></li>
-                        <li><a href="service-details.html">Service Details</a></li>
-                      </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                      <a href="shop.html">Shop</a>
-                      <ul class="sub-menu">
-                        <li><a href="shop.html">Shop Grid</a></li>
-                        <li><a href="shop-sidebar.html">Shop Sidebar</a></li>
-                        <li><a href="shop-details.html">Shop Details</a></li>
-                        <li><a href="cart.html">Cart</a></li>
-                        <li><a href="checkout.html">Checkout</a></li>
-                      </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                      <a href="blog.html">Blog</a>
-                      <ul class="sub-menu">
-                        <li><a href="blog.html">Blog Grid</a></li>
-                        <li><a href="blog-sidebar.html">Blog Sidebar</a></li>
-                        <li><a href="blog-sidebar-2.html">Blog Sidebar Two</a></li>
-                        <li><a href="blog-details.html">Blog Details</a></li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="contact.html">Contact</a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
+
               <div class="col-auto">
                 <div class="header-btns">
-                  <button class="vs-icon style3 sideCartToggler">
-                    <i class="fas fa-shopping-cart"></i>
-                  </button>
-                  <button class="vs-icon style3 sideMenuToggler d-none d-lg-inline-flex">
-                    <i class="far fa-bars"></i>
-                  </button>
+
                   <a href="appointment.html" class="vs-btn style2 d-none d-xl-inline-block">
                     <span class="vs-btn__bar"></span>
-                    Make An Appointment
+                    Haz una Cita
                   </a>
                   <button class="vs-menu-toggle d-inline-block d-lg-none"><i class="fal fa-bars"></i></button>
                 </div>
@@ -418,17 +114,18 @@
   <div class="breadcumb-wrapper" data-bg-src="assets/img/bg/breadcumb-bg.png">
     <div class="container z-index-common">
       <div class="breadcumb-content">
-        <h1 class="breadcumb-title">Appointment</h1>
+        <h1 class="breadcumb-title">Cita</h1>
         <div class="breadcumb-menu-wrap">
           <ul class="breadcumb-menu">
-            <li><a href="index.html">Home</a></li>
-            <li>Appointment</li>
+            <li><a href="index.html">Inicio</a></li>
+            <li>Cita</li>
           </ul>
         </div>
       </div>
     </div>
   </div>
-  <!-- Appointment -->
+
+  <!-- Cita -->
   <div class="space-top space-bottom z-index-common">
     <div class="bg-shape1">
       <img class="shape1 end-0 top-0" src="assets/img/shapes/shape-5.svg" alt="shapes">
@@ -438,74 +135,74 @@
       <div class="row">
         <div class="col-lg-10 mx-auto">
           <div class="title-area text-center">
-            <h2 class="sec-title h2">Make an Appointment</h2>
+            <h2 class="sec-title h2">Solicitar Cita</h2>
           </div>
           <form class="form-style2" action="mail.php" method="POST">
             <div class="row gx-20">
               <div class="col-md-6 form-group">
-                <input class="form-control" type="text" name="fname" id="name" placeholder="First Name">
+                <input class="form-control" type="text" name="fname" id="name" placeholder="Nombre">
               </div>
               <div class="col-md-6 form-group">
-                <input class="form-control" type="text" name="lname" id="name" placeholder="Last Name">
+                <input class="form-control" type="text" name="lname" id="name" placeholder="Apellido">
               </div>
               <div class="col-md-6 form-group">
-                <input class="form-control" type="email" name="email" id="email" placeholder="Email Address">
+                <input class="form-control" type="email" name="email" id="email" placeholder="Correo Electrónico">
               </div>
               <div class="col-md-6 form-group">
-                <input class="form-control" type="tel" name="tel" id="tel" placeholder="Phone Number">
+                <input class="form-control" type="tel" name="tel" id="tel" placeholder="Número de Teléfono">
               </div>
               <div class="col-md-6 form-group">
-                <input class="form-control" type="date" name="date" id="tel" placeholder="Select Date">
+                <input class="form-control" type="date" name="date" id="date" placeholder="Seleccionar Fecha">
               </div>
               <div class="col-md-6 form-group">
-                <input class="form-control" type="time" name="time" id="time" placeholder="Select Time">
+                <input class="form-control" type="time" name="time" id="time" placeholder="Seleccionar Hora">
               </div>
               <div class="col-md-6 form-group">
-                <select class="form-control" name="subject" id="subject">
-                  <option value="Vehicle Year">Vehicle Year</option>
-                  <option value="Toyota">Toyota</option>
+                <select class="form-control" name="year" id="year">
+                  <option value="Año de Vehículo">Año de Vehículo</option>
+                  <option value="2022">2022</option>
+                  <option value="2021">2021</option>
+                  <option value="2020">2020</option>
+                  <option value="2019">2019</option>
+                  <option value="2018">2018</option>
+                </select>
+              </div>
+              <div class="col-md-6 form-group">
+                <select class="form-control" name="brand" id="brand">
+                  <option value="Marca de Vehículo">Marca de Vehículo</option>
                   <option value="Honda">Honda</option>
-                  <option value="Ford">Ford</option>
-                  <option value="Chevrolet">Chevrolet</option>
-                  <option value="BMW">BMW</option>
+                  <option value="Yamaha">Yamaha</option>
+                  <option value="Suzuki">Suzuki</option>
+                  <option value="Kawasaki">Kawasaki</option>
+                  <option value="Ducati">Ducati</option>
                 </select>
               </div>
               <div class="col-md-6 form-group">
-                <select class="form-control" name="subject" id="subject">
-                  <option value="Vehicle Brand">Vehicle Brand</option>
-                  <option value="Corolla">Corolla</option>
-                  <option value="Civic">Civic</option>
-                  <option value="Focus">Focus</option>
-                  <option value="Malibu">Malibu</option>
-                  <option value="3 Series">3 Series</option>
+                <select class="form-control" name="model" id="model">
+                  <option value="Modelo de Vehículo">Modelo de Vehículo</option>
+                  <option value="CBR600RR">CBR600RR</option>
+                  <option value="YZF-R1">YZF-R1</option>
+                  <option value="GSX-R1000">GSX-R1000</option>
+                  <option value="Ninja H2">Ninja H2</option>
+                  <option value="Panigale V4">Panigale V4</option>
                 </select>
               </div>
               <div class="col-md-6 form-group">
-                <select class="form-control" name="subject" id="subject">
-                  <option value="Vehicle Model">Vehicle Model</option>
-                  <option value="Sedan">Sedan</option>
-                  <option value="SUV">SUV</option>
-                  <option value="Truck">Truck</option>
-                  <option value="Convertible">Convertible</option>
-                  <option value="Hatchback">Hatchback</option>
-                </select>
-              </div>
-              <div class="col-md-6 form-group">
-                <select class="form-control" name="subject" id="subject">
-                  <option value="Select Service">Select Service</option>
-                  <option value="Oil Change">Oil Change</option>
-                  <option value="Tire Rotation">Tire Rotation</option>
-                  <option value="Brake Inspection">Brake Inspection</option>
-                  <option value="Engine Tune-Up">Engine Tune-Up</option>
-                  <option value="Transmission Flush">Transmission Flush</option>
+                <select class="form-control" name="service" id="service">
+                  <option value="Seleccionar Servicio">Seleccionar Servicio</option>
+                  <option value="Cambio de Aceite">Cambio de Aceite</option>
+                  <option value="Rotación de Neumáticos">Rotación de Neumáticos</option>
+                  <option value="Inspección de Frenos">Inspección de Frenos</option>
+                  <option value="Revisión de Motor">Revisión de Motor</option>
+                  <option value="Limpieza de Transmisión">Limpieza de Transmisión</option>
                 </select>
               </div>
               <div class="col-md-12 form-group">
-                <textarea class="form-control" name="textarea" id="textarea"
-                  placeholder="Write a Message..."></textarea>
+                <textarea class="form-control" name="message" id="textarea"
+                  placeholder="Escriba un Mensaje..."></textarea>
               </div>
               <div class="col-md-12 form-group text-center">
-                <button class="vs-btn" type="button">Send Appointment</button>
+                <button class="vs-btn" type="submit">Enviar Cita</button>
               </div>
             </div>
           </form>
@@ -513,122 +210,98 @@
       </div>
     </div>
   </div>
-  <!-- Appointment End -->
-  <!-- FAQ Area -->
-  <section class="space-top space-extra-bottom">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 mx-auto">
-          <div class="title-area text-center">
-            <span class="sec-subtitle style4">FAQs</span>
-            <h2 class="sec-title">Frequently Ask Anything's That You Want To Know</h2>
-          </div>
+  <!-- Cita End -->
+
+<!-- Área de Preguntas Frecuentes -->
+<section class="space-top space-extra-bottom">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 mx-auto">
+        <div class="title-area text-center">
+          <span class="sec-subtitle style4">Preguntas Frecuentes</span>
+          <h2 class="sec-title">Preguntas que puedes querer saber</h2>
         </div>
       </div>
-      <div class="row">
-        <div class="col-lg-10 mx-auto">
-          <div class="accordion-style1">
-            <div class="accordion" id="accordionExample">
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                    aria-expanded="true" aria-controls="collapseOne">
-                    How often should I schedule routine maintenance for my vehicle?
-                  </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    The duration of a service appointment can vary based on the type of service required. Simple
-                    services
-                    like oil changes may take around 30 minutes, while more complex repairs could take several hours.
-                    Our
-                    team will provide you with an estimated time when you schedule your appointment.
-                  </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <div class="accordion-style1">
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                  aria-expanded="true" aria-controls="collapseOne">
+                  ¿Con qué frecuencia debo programar el mantenimiento de rutina para mi moto?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Se recomienda programar el mantenimiento de rutina cada 5,000 km o cada seis meses, lo que ocurra primero. Sin embargo, esto puede variar según el modelo de tu moto y el uso que le des. Consulta el manual del propietario para obtener más información.
                 </div>
               </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    How long does a typical car service appointment take?
-                  </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    The duration of a service appointment can vary based on the type of service required. Simple
-                    services
-                    like oil changes may take around 30 minutes, while more complex repairs could take several hours.
-                    Our
-                    team will provide you with an estimated time when you schedule your appointment.
-                  </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  ¿Cuánto tiempo toma una cita de servicio típica para mi moto?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  La duración de una cita de servicio puede variar según el tipo de servicio requerido. Servicios simples como el cambio de aceite pueden tomar alrededor de 30 minutos, mientras que reparaciones más complejas pueden tardar varias horas. Nuestro equipo te proporcionará un tiempo estimado cuando programes tu cita.
                 </div>
               </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Can you provide a shuttle service or loaner cars while my car is being serviced?
-                  </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    The duration of a service appointment can vary based on the type of service required. Simple
-                    services
-                    like oil changes may take around 30 minutes, while more complex repairs could take several hours.
-                    Our
-                    team will provide you with an estimated time when you schedule your appointment.
-                  </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  ¿Ofrecen servicio de transporte o motos de cortesía mientras mi moto está en servicio?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Actualmente no ofrecemos un servicio de transporte, pero tenemos opciones de motos de cortesía disponibles bajo solicitud. Contáctanos para más detalles.
                 </div>
               </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                    Is it necessary to follow the manufacturer's recommended service schedule?
-                  </button>
-                </h2>
-                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    The duration of a service appointment can vary based on the type of service required. Simple
-                    services
-                    like oil changes may take around 30 minutes, while more complex repairs could take several hours.
-                    Our
-                    team will provide you with an estimated time when you schedule your appointment.
-                  </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  ¿Es necesario seguir el programa de mantenimiento recomendado por el fabricante?
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Sí, seguir el programa de mantenimiento recomendado por el fabricante es importante para asegurar el rendimiento y la longevidad de tu moto. Esto ayuda a prevenir problemas mayores y a mantener la garantía de tu vehículo.
                 </div>
               </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                    How long does a typical car service appointment take?
-                  </button>
-                </h2>
-                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    The duration of a service appointment can vary based on the type of service required. Simple
-                    services
-                    like oil changes may take around 30 minutes, while more complex repairs could take several hours.
-                    Our
-                    team will provide you with an estimated time when you schedule your appointment.
-                  </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  ¿Puedo programar una cita de servicio en línea?
+                </button>
+              </h2>
+              <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Sí, puedes programar una cita de servicio en línea a través de nuestro sitio web. Simplemente completa el formulario de citas y selecciona la fecha y hora que te convenga.
                 </div>
               </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                    Can I schedule a service appointment online?
-                  </button>
-                </h2>
-                <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    The duration of a service appointment can vary based on the type of service required. Simple
-                    services
-                    like oil changes may take around 30 minutes, while more complex repairs could take several hours.
-                    Our
-                    team will provide you with an estimated time when you schedule your appointment.
-                  </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                  ¿Qué debo llevar a mi cita de servicio?
+                </button>
+              </h2>
+              <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Al llevar tu moto a la cita de servicio, asegúrate de tener tu manual del propietario, cualquier factura o recibo de servicio anterior, y cualquier información sobre problemas que hayas experimentado con la moto.
                 </div>
               </div>
             </div>
@@ -636,29 +309,10 @@
         </div>
       </div>
     </div>
-  </section>
-  <!-- FAQ Area End -->
-  <!-- Newsletter Area -->
-  <section class="newsletter--layout1 z-index-common" data-bg-src="assets/img/bg/newsletter-1-1.jpg">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6">
-          <div class="white-title mb-30">
-            <span class="sec-subtitle style6">Our Newsletter</span>
-            <h2 class="sec-title">Get Regular Update Please Subscribe Newsletter </h2>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <form action="mail.php" class="subscribe-block--style1 mb-30">
-            <input class="subscribe-block__field" type="text" placeholder="Enter Your Email">
-            <a href="blog-details.html" class="vs-btn">Subscribe<i class="fab fa-telegram-plane"></i></a>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Newsletter Area End -->
+  </div>
+</section>
+<!-- Área de Preguntas Frecuentes Fin -->
+
   <!--==============================
     Footer Area
 ==============================-->
